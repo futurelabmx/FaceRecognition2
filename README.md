@@ -1,0 +1,2 @@
+# Reconocimiento facial con OPENCV
+
