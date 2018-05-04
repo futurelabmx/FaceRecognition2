@@ -44,4 +44,5 @@ Para comenzar a detectar y reconocer caras:
 python reconocimiento.py
 ~~~
 - Puedes cambiar el metodo de reconocimiento por caulquiera de los 3 mencionados al inicio, prueba los 3 y checa cual te da mejores resultados.
-- 
+
+<img src="https://github.com/futurelabmx/FaceRecognition2/blob/master/reconocido.png" width="600">
