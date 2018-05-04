@@ -1,6 +1,6 @@
 import cv2, sys, numpy, os
 size = 4
-fn_haar = 'haarcascade_frontalface_alt.xml'
+fn_haar = 'haarcascade_frontalface_default.xml'
 fn_dir = 'att_faces/orl_faces'
 fn_name = sys.argv[1]
 path = os.path.join(fn_dir, fn_name)

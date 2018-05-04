@@ -1,6 +1,6 @@
 import cv2, sys, numpy, os
 size = 4
-fn_haar = 'haarcascade_frontalface_alt.xml'
+fn_haar = 'haarcascade_frontalface_default.xml'
 fn_dir = 'att_faces/orl_faces'
 # Part 1: Creando LBPHFaceRecognizer
 print('Formando...')
