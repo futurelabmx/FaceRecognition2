@@ -5,7 +5,7 @@ OPENCV tiene 3 metodos incorporados para realizar reconocimiento facial, y porqu
 2. FisherFaces – cv2.face.FisherFaceRecognizer_create()
 3. Local Binary Patterns Histograms (LBPH) – cv2.face.LBPHFaceRecognizer_create()
 
-Cada uno resalta componentes principales diferentes, sera cuestion de elegir el adecuado de acuerdo a las necesidades de cada proyecto.
+Cada uno resalta componentes principales diferentes, es cuestion de elegir el adecuado de acuerdo a las necesidades de cada proyecto.
 
 | **EigenFaces** | **FisherFaces** | **LBPH** |
 | :-------: | :------: | :-----: |
