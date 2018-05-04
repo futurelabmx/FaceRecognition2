@@ -1,0 +1,30 @@
+# Compilados #
+
+*.class
+*.dll
+*.pyc
+
+# paquetes #
+
+*.zip
+*.dmg
+*.rar
+
+# Generados por el sistema operativo #
+
+.DS_Store
+.Trashes
+.Thumbs.db
+
+# Datos sensibles #
+
+credentials.py
+
+# directorios #
+
+/__pycache__/*
+/att_faces/*
+
+# imagenes #
+
+*.jpg
