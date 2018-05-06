@@ -23,8 +23,8 @@ Posteriormente para guardar las fotos de entrenamiento para el modelo, nos desca
 ~~~
 carpeta_de_proyecto\att_faces\orl_faces\luis_sustaita
 carpeta_de_proyecto\att_faces\orl_faces\antonio_smith
-carpeta_de_proyecto\att_faces\orl_faces\ricardo_miron
-carpeta_de_proyecto\att_faces\orl_faces\rodolfo_ferro
+carpeta_de_proyecto\att_faces\orl_faces\ricardo_ferro
+carpeta_de_proyecto\att_faces\orl_faces\rodolfo_miron
 ~~~
 
 De los scripts uno será para aprender caras (capture.py) y el otro para reconocerlas (reconocimiento.py).
