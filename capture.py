@@ -35,7 +35,7 @@ while count < 100:
     #convertimos la imagen a blanco y negro
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    #redimencionar la imagen
+    #redimensionar la imagen
     mini = cv2.resize(gray, (int(gray.shape[1] / size), int(gray.shape[0] / size)))
 
     """buscamos las coordenadas de los rostros (si los hay) y
@@ -44,15 +44,15 @@ while count < 100:
     faces = sorted(faces, key=lambda x: x[3])
     
     if faces:
-        #Dibujamos un rectangulo en las coordenadas del rostro
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
-        #Ponemos el nombre en el rectagulo
-        cv2.putText(img, nombre, (x - 10, y - 10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-
         face_i = faces[0]
         (x, y, w, h) = [v * size for v in face_i]
         face = gray[y:y + h, x:x + w]
         face_resize = cv2.resize(face, (img_width, img_height))
+        
+        #Dibujamos un rectangulo en las coordenadas del rostro
+        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
+        #Ponemos el nombre en el rectagulo
+        cv2.putText(img, nombre, (x - 10, y - 10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))        
 
         #El nombre de cada foto es el numero del ciclo
         #Obtenemos el nombre de la foto
@@ -61,7 +61,7 @@ while count < 100:
                if n[0]!='.' ]+[0])[-1] + 1
 
         #Metemos la foto en el directorio
-        cv2.imwrite('%s/%s.png' % (path, pin), face_resize)
+        #cv2.imwrite('%s/%s.png' % (path, pin), face_resize)
 
         #Contador del ciclo
         count += 1
@@ -72,4 +72,5 @@ while count < 100:
     #Si se presiona la tecla ESC se cierra el programa
     key = cv2.waitKey(10)
     if key == 27:
+        cv2.destroyAllWindows()
         break
