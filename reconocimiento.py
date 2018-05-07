@@ -4,6 +4,9 @@ import cv2
 import os
 #OpenCV trabaja con arreglos de numpy
 import numpy
+#Se importa la lista de personas con acceso al laboratorio
+from listaPermitidos import flabianos
+flabs=flabianos()
 
 # Parte 1: Creando el entrenamiento del modelo
 print('Formando...')
@@ -74,9 +77,11 @@ while True:
         if prediction[1]<100 :
           #Ponemos el nombre de la persona que se reconoció
           cv2.putText(frame,'%s - %.0f' % (cara,prediction[1]),(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))
-          #En caso de que la cara sea de algun conocido se realizara determinadas acciones
-          #if cara == "CONOCIDO":
-            #ACCIONES PARA CARAS CONOCIDAS
+
+          #En caso de que la cara sea de algun conocido se realizara determinadas accione          
+          #Busca si los nombres de las personas reconocidas estan dentro de los que tienen acceso
+          lista=[cara]
+          flabs.TuSiTuNo(lista)
 
         #Si la prediccion es mayor a 100 no es un reconomiento con la exactitud suficiente
         elif prediction[1]>101 and prediction[1]<500:           
@@ -84,7 +89,7 @@ while True:
             cv2.putText(frame, 'Desconocido',(x-10, y-10), cv2.FONT_HERSHEY_PLAIN,1,(0, 255, 0))  
 
         #Mostramos la imagen
-        cv2.imshow('OpenCV', frame)
+        cv2.imshow('OpenCV Reconocimiento facial', frame)
 
     #Si se presiona la tecla ESC se cierra el programa
     key = cv2.waitKey(10)
