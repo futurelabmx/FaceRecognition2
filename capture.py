@@ -61,7 +61,7 @@ while count < 100:
                if n[0]!='.' ]+[0])[-1] + 1
 
         #Metemos la foto en el directorio
-        #cv2.imwrite('%s/%s.png' % (path, pin), face_resize)
+        cv2.imwrite('%s/%s.png' % (path, pin), face_resize)
 
         #Contador del ciclo
         count += 1
